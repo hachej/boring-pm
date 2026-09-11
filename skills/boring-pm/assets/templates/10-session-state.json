@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "project_id": "TBD",
+  "revision": 0,
+  "updated_at": null,
+  "stage": "frame",
+  "status": "in_progress",
+  "intended_artifact_use": "prototype",
+  "framework": {
+    "repository": "https://github.com/hachej/boring-ui",
+    "reference_commit": "75b3d051157a32c3f960fa452da54704451fb049",
+    "target_version_verified_at": null
+  },
+  "participants": [],
+  "artifact_paths": {},
+  "answered_question_ids": [],
+  "evidence_ids": [],
+  "decision_ids": [],
+  "open_questions": [],
+  "blocking_unknowns": [],
+  "retained_assumptions": [],
+  "last_transition": null,
+  "next_question": "What kind of work do you know deeply, and what happened recently that made you think software could help?",
+  "next_action": "Capture one concrete task and identify its first user."
+}
