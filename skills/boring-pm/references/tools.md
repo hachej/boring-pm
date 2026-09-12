@@ -4,6 +4,7 @@ Use a tool when it gives the expert a better way to explain, inspect, correct, o
 
 | User moment | Needed capability | First choice | Optional addition |
 | --- | --- | --- | --- |
+| Resume with the right level of detail | Retrieve and correct this participant's profile and session state | Private project files with participant IDs and revisions | Authorized host profile storage for reuse across projects |
 | Explain a real task | Conversation and targeted questions | Chat; installed Boring UI `ask_user` where useful | Consented transcription for an actual voice workflow |
 | Show how the work happens | Read supplied documents, screenshots, and examples | Host file tools and suitable parsers | Scoped access to the user's existing document system |
 | Check the agent's understanding | Editable evidence, rules, and brief | Workspace Markdown/JSON and file views | Craft as an expert-facing shared document |
@@ -11,6 +12,8 @@ Use a tool when it gives the expert a better way to explain, inspect, correct, o
 | Refine detailed interaction | Inspect and manipulate a prototype | Small Boring UI prototype | Figma when precise design collaboration is needed |
 | Turn decisions into software | Code, execution, tests, and preview | Host coding and runtime tools | GitHub for the chosen source destination |
 | Try and retain the product | Task trial, persistent results, access | Actual product runtime and explicit delivery record | Deployment and outcome tools appropriate to that product |
+
+Use [the profile](user-profile.md) to choose a representation the person can inspect, and [solution exploration](solution-exploration.md) to compare alternatives before selecting an integration. A host's profile store must support the right person/scope, correction, and controlled reuse. This skill provides the data format and workflow, not an implemented profile service or automatic cross-session memory.
 
 **Canva:** its official MCP documentation describes design creation/editing, discovery, exports, and collaboration [S23](sources.md#s23). Use it when a visual explanation helps the expert react to an idea. Recheck client-exposed tools, plan requirements, and editing access [S24](sources.md#s24). A storyboard is not a functioning product.
 

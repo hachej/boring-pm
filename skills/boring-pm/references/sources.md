@@ -1,6 +1,6 @@
 # Research and source register
 
-Reviewed on **2026-09-11**. This is focused web research for an expert-to-software agent, not a systematic literature review.
+Initial research reviewed on **2026-09-11**; user profiling and solution exploration extended on **2026-09-12**. Individual review dates are recorded below. This is focused web research for an expert-to-software agent, not a systematic literature review.
 
 ## Contents
 
@@ -19,7 +19,7 @@ The knowledge base paraphrases a small set of principles and adds original Borin
 
 ## Synthesis and limits
 
-The strongest fit is a combination: recover actual work, expose expert judgment, trace needs into testable behavior, choose a small outcome, and validate through use. This combined agent protocol has **not** been empirically validated. Numeric defaults, workflow stages, gate definitions, tool priorities, and the fictional product example are Boring PM design proposals.
+The combined approach is to understand the person and actual work, expose expert judgment, compare solutions for the intended users and available support, trace decisions into testable behavior, and validate through use. This combined agent protocol has **not** been empirically validated. Numeric defaults, workflow stages, gate definitions, profile fields and adaptation rules, solution-fit criteria, tool priorities, and the fictional product example are Boring PM design proposals.
 
 The Mom Test's official site was reviewed as additional context, but only its public overview was accessible in this pass; specific book rules are not treated as verified evidence here. No claim is made to have surveyed all PM methods, read every referenced book, or tested the third-party integrations.
 
@@ -41,7 +41,7 @@ Limit: A practitioner framework; not causal proof that a specific discovery proc
 
 ### S02
 
-**[Using in-depth interviews](https://www.gov.uk/service-manual/user-research/using-in-depth-interviews)** — GOV.UK Service Manual / User research community. Type: `public_service_guidance`. Reviewed: 2026-09-11. Access: `full_page`.
+**[Using in-depth interviews](https://www.gov.uk/service-manual/user-research/using-in-depth-interviews)** — GOV.UK Service Manual / User research community. Type: `public_service_guidance`. Reviewed: 2026-09-12. Access: `full_page`.
 
 Principle: Use a discussion guide, neutral questions, concrete examples, and clarification.
 
@@ -256,3 +256,27 @@ Limit: Capabilities differ by client and server; generated code still requires a
 Principle: Documents creating public repositories and pushing an existing local repository with --source and --push.
 
 Limit: Requires an authenticated CLI and appropriate account permissions; unavailable in the authoring workspace.
+
+### S29
+
+**[Understanding users who do not use digital services](https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services)** — GOV.UK Service Manual / User research community. Type: `public_service_guidance`. Reviewed: 2026-09-12. Access: `full_page`.
+
+Principle: Distinguishes digital skills, confidence, access, and support needs; cautions that users can misjudge their own ability.
+
+Limit: Government service guidance about assisted digital support; Boring PM does not adopt its scale or claim a validated automated skills assessment.
+
+### S30
+
+**[Compare and Contrast Decisions](https://www.producttalk.org/glossary-discovery-compare-and-contrast-decisions/)** — Product Talk. Type: `author_practitioner`. Reviewed: 2026-09-12. Access: `full_page`.
+
+Principle: Generate alternatives for one opportunity, identify their critical assumptions, and compare evidence from testing those assumptions.
+
+Limit: Practitioner guidance; the candidate count, fit criteria, and recommendation protocol in Boring PM are original design choices, not comparative efficacy results.
+
+### S31
+
+**[User Interviews 101](https://www.nngroup.com/articles/user-interviews/)** — Maria Rosala and Kara Pernice / Nielsen Norman Group. Type: `author_practitioner`. Reviewed: 2026-09-12. Access: `full_page`.
+
+Principle: Use flexible, concrete interview questions and distinguish reported attitudes or behavior from observation of actual task performance.
+
+Limit: UX practice guidance; an interview-based profile is provisional and does not establish that a proposed product will be usable.

@@ -20,7 +20,7 @@
       "type": "public_service_guidance",
       "url": "https://www.gov.uk/service-manual/user-research/using-in-depth-interviews",
       "access": "full_page",
-      "reviewed_at": "2026-09-11",
+      "reviewed_at": "2026-09-12",
       "principle": "Use a discussion guide, neutral questions, concrete examples, and clarification.",
       "limitation": "Qualitative interview guidance; an interview account is not independent behavioral observation."
     },
@@ -313,6 +313,40 @@
       "reviewed_at": "2026-09-11",
       "principle": "Documents creating public repositories and pushing an existing local repository with --source and --push.",
       "limitation": "Requires an authenticated CLI and appropriate account permissions; unavailable in the authoring workspace."
+    },
+    {
+      "id": "S29",
+      "title": "Understanding users who do not use digital services",
+      "author": "GOV.UK Service Manual / User research community",
+      "type": "public_service_guidance",
+      "url": "https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services",
+      "access": "full_page",
+      "reviewed_at": "2026-09-12",
+      "principle": "Distinguishes digital skills, confidence, access, and support needs; cautions that users can misjudge their own ability.",
+      "limitation": "Government service guidance about assisted digital support; Boring PM does not adopt its scale or claim a validated automated skills assessment."
+    },
+    {
+      "id": "S30",
+      "title": "Compare and Contrast Decisions",
+      "author": "Product Talk",
+      "type": "author_practitioner",
+      "url": "https://www.producttalk.org/glossary-discovery-compare-and-contrast-decisions/",
+      "access": "full_page",
+      "reviewed_at": "2026-09-12",
+      "principle": "Generate alternatives for one opportunity, identify their critical assumptions, and compare evidence from testing those assumptions.",
+      "limitation": "Practitioner guidance; the candidate count, fit criteria, and recommendation protocol in Boring PM are original design choices, not comparative efficacy results."
+    },
+    {
+      "id": "S31",
+      "title": "User Interviews 101",
+      "author": "Maria Rosala and Kara Pernice / Nielsen Norman Group",
+      "type": "author_practitioner",
+      "url": "https://www.nngroup.com/articles/user-interviews/",
+      "access": "full_page",
+      "reviewed_at": "2026-09-12",
+      "principle": "Use flexible, concrete interview questions and distinguish reported attitudes or behavior from observation of actual task performance.",
+      "limitation": "UX practice guidance; an interview-based profile is provisional and does not establish that a proposed product will be usable."
     }
-  ]
+  ],
+  "updated_at": "2026-09-12"
 }

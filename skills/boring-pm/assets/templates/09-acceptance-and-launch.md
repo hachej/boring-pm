@@ -13,6 +13,7 @@ Results: `not_run`, `passed`, `failed`, `blocked`. A proposed check is not a suc
 ## Expert/user trial
 
 - Participant role and relevant context:
+- Profile revision, intended software experience, and planned level of support:
 - Representative task and input:
 - Independent completion vs coached completion:
 - Errors, corrections, and recovery:
@@ -28,6 +29,7 @@ Results: `not_run`, `passed`, `failed`, `blocked`. A proposed check is not a suc
 - Where results persist and how the user retrieves/exports them:
 - Relevant restart/recovery behavior checked:
 - Operating/support owner and known limitations:
+- Setup, routine operation, and recovery demonstrated at the intended level of help:
 - Hosting/configuration/backup responsibility where applicable:
 - Scope-specific authorization already held or still needed:
 - Delivery status and evidence:

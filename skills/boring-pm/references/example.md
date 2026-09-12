@@ -2,6 +2,18 @@
 
 **Entirely fictional.** Dialogue, cases, measurements, decisions, and product requirements below illustrate the skill. No participant was interviewed, no application was implemented, and no acceptance check was executed.
 
+## 0. Establish the person's technical comfort
+
+Boring PM: “What are you comfortable doing with software today—for example, using apps, setting up workflows, or writing code?”
+
+Expert: “I write Python and use command-line tools for performance work.”
+
+During the discussion of delivery, the expert adds: “I want to review files and keep control of release decisions. I do not want to maintain a new service.”
+
+Save a fictional project profile `P-001`, revision 1, for participant `U-001`. Record `PF-001`, dimension `software_tasks`, value “Python and command-line performance work,” status `reported`, basis `E-005`. Record `PF-002`, dimension `desired_involvement`, value “review files; no new service maintenance,” status `reported`, basis `E-006`. Domain expertise and the availability of an operator are separate facts; do not infer them from coding experience. Link the profile from session state.
+
+The interview can use precise benchmark terminology, but the proposed product must respect the person's wish to avoid maintenance. If this context were already supplied, skip the opening question.
+
 ## 1. Begin with the work
 
 Expert: “I want an AI dashboard that tells us if a release is fast enough.”
@@ -28,6 +40,8 @@ The request now describes a specific user's review task. It does not establish d
 | E-002 | Expert reports checking machine class, benchmark version, and workload before elapsed time | reported |
 | E-003 | Expert wants missing baselines left unresolved and retains release authority | reported |
 | E-004 | Expert can provide two CSV summaries and is the first intended user | reported |
+| E-005 | Expert reports writing Python and using command-line performance tools | reported |
+| E-006 | Expert wants file review and retained release authority without maintaining a new service | reported |
 
 O-001, **inferred**: make it easy to identify comparable benchmark changes and record review decisions without losing the input context. Basis: E-001–E-004. A second incident or actual artifacts would test this interpretation.
 
@@ -47,6 +61,20 @@ D-002: support paired CSV inputs and manual review notes. Exclude CI ingestion, 
 | R-004 | Software may flag attention; the expert records the review decision | E-003, D-002 |
 
 Open question Q-001: how are duplicate case keys handled? Treat duplicate keys as unresolved for the prototype, pending an actual artifact review; do not silently choose a row. Open assumption A-001: the supplied CSVs will contain the required fields. Resolve with a small fixture before implementation.
+
+### Compare ways to deliver that outcome
+
+For this example, Boring UI is an explicit implementation constraint. Compare the same mismatched-machine case in each candidate:
+
+| Option | User experience | Fit and tradeoff | Status |
+| --- | --- | --- | --- |
+| OPT-001 — Guided review document | Expert follows a checklist and calculates changes manually | Small implementation, but most comparison work stays with the expert | Deferred |
+| OPT-002 — CSV comparison with human review | Expert supplies two files, inspects flagged/unresolved rows, records decisions, and exports notes | Supports the stated file workflow and control; needs input parsing and a supported Boring UI host | Recommended for a bounded prototype |
+| OPT-003 — CI-connected review workflow | Results arrive automatically for each build; expert reviews exceptions | Reduces repeated import steps, but adds integration and operating dependencies not established for this first slice | Deferred |
+
+D-003 recommends OPT-002 based on E-001–E-006 and PF-001–PF-002. Coding ability alone does not justify assigning the expert server maintenance. Operating support remains unknown (`A-002`), so delivery readiness depends on verifying an available operator/host. Revisit the recommendation if that support is unavailable or repeated imports become the dominant burden.
+
+The next comparison uses one realistic input pair to check whether required fields exist and the proposed review is understandable. It is a planned check, not evidence that OPT-002 works.
 
 ## 4. Write observable requirements and checks
 
@@ -73,3 +101,5 @@ Next useful step: inspect a representative pair of CSVs to check A-001 and dupli
 Candidate outcome measure: elapsed time from valid input selection to a complete review export, accompanied by unresolved-item and mistaken-comparison counts. Baseline and target: unknown until measured or deliberately chosen. This example makes no time-saving claim.
 
 Product-in-hand evidence would include an accessible entry point, real input support, recoverable saved notes, successful expert task completion, and an export. Until that exists, report the result as a proposed specification and handoff.
+
+The fit check also requires the expert to complete a review without unplanned command-line setup or maintenance work. Record any coaching and confirm the actual operating owner before claiming the hands-off delivery requirement is met.

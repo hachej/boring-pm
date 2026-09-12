@@ -12,7 +12,7 @@ Keep four separate lists: necessary for the first outcome, later opportunities, 
 
 ## Compare alternatives
 
-Before committing to a feature set, compare two or three meaningful approaches, including an improvement to the existing manual workflow when plausible. This number is a Boring PM convenience, not a universal standard. Judge alternatives by the chosen outcome, error consequences, adoption effort, implementation work, and reversibility.
+Follow [solution exploration](solution-exploration.md) before committing to a feature set. Compare meaningful approaches to the same task using the relevant [user profiles](user-profile.md), while respecting explicit platform constraints. Judge alternatives by outcome, error consequences, user effort and control, setup and learning burden, operating ownership, cost, implementation work, and reversibility. Recommendation rationale must explain why the selected approach fits the actual users and available support.
 
 An attractive alternative can be rejected because its data is inaccessible or its operator burden is too high. Record why, so the same argument does not have to be repeated later.
 

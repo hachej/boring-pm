@@ -4,6 +4,9 @@ Select a few relevant prompts, then follow the answer. The wording below is orig
 
 | Purpose | Starter | Probe when useful |
 | --- | --- | --- |
+| Technical comfort, first if unknown | What are you comfortable doing with software today—for example, using apps, setting up workflows, or writing code? | What is a recent example? |
+| Desired involvement | How much of the setup and maintenance would you want to handle yourself? | Who could handle the rest, and is that support available? |
+| Explanation depth | Would a worked example, a sketch, or technical detail help you assess this? | Which part should we explore more closely? |
 | Expert context | What work do people come to you for help with? | Which part have you done yourself recently? |
 | Intended user | Who would use the result day to day? | Are they as experienced as you? Who decides to adopt it? |
 | Trigger | What happened the last time this task came up? | What made you start working on it then? |
@@ -11,6 +14,9 @@ Select a few relevant prompts, then follow the answer. The wording below is orig
 | Artifacts | Can you show a redacted input and its finished output? | What does each field mean? Where did it come from? |
 | Pain | Where did this particular case become difficult? | What did the delay or mistake prevent you from doing? |
 | Existing alternatives | What do you use to get this done today? | What have you tried and stopped using? What was missing? |
+| Solution tradeoff | For this same case, which part would you want to review yourself? | What would make either approach difficult to use next week? |
+| Operating fit | If something stopped working, who would fix it? | How much time or help can you realistically rely on? |
+| Profile correction | Has anything changed about how hands-on you want to be? | Which part of the current recommendation should that change? |
 | Cognitive cues | What did you notice that changed your decision? | Would a less experienced person notice the same thing? |
 | Competing explanations | What else could have explained that signal? | What information ruled that explanation out? |
 | Thresholds | What makes an input acceptable in this situation? | What happens exactly at the boundary? What are the units? |
@@ -33,6 +39,8 @@ Select a few relevant prompts, then follow the answer. The wording below is orig
 
 | Avoid | Better |
 | --- | --- |
+| You're an expert, so you can manage the server? | Who would handle setup and keep this running? |
+| Should we use React or Python? (before the user needs that decision) | What do you need to be able to change yourself after delivery? |
 | Would an AI assistant save you hours? | What took time in the last case, and how much? |
 | Do you want a dashboard? | What do you need to decide after seeing the information? |
 | You would pay for this, right? | How is this task funded today, and who makes a purchase decision? |

@@ -4,11 +4,11 @@ Version/date: TBD. Owner: TBD. Intended use: prototype / pilot / production buil
 
 ## 1. Problem, people, and outcome
 
-Link to brief, supporting evidence, chosen opportunity, and outcome measure. Include baseline and proposed target separately. State missing perspectives.
+Link to brief, supporting evidence, chosen opportunity, and outcome measure. Include baseline and proposed target separately. State missing perspectives. Reference the relevant profile revisions and distinguish the interviewee, product users, builder, and operator.
 
 ## 2. Scope
 
-Define the first user, situation, input, task, and useful output. List inclusions, exclusions, manual steps, assumptions, and dependencies. Reference the selection decision.
+Define the first user, situation, input, task, and useful output. List inclusions, exclusions, manual steps, assumptions, and dependencies. Reference the selected option, alternatives, fit rationale, and reconsideration trigger.
 
 ## 3. End-to-end journey
 
@@ -22,6 +22,7 @@ Define the first user, situation, input, task, and useful output. List inclusion
 - Behavior statement:
 - User value/rationale:
 - Opportunity, evidence, decision, and rule IDs:
+- Profile fact IDs where user fit motivates the behavior:
 - Priority and release slice:
 - Preconditions, trigger, and inputs:
 - Required result and state transition:
@@ -67,7 +68,7 @@ Use only relevant rows. Do not claim broad conformance from a small checklist.
 | --- | --- | --- | --- | --- | --- | --- |
 | AC-001 | FR-001 | TBD | TBD | TBD | test/demo/inspection/analysis | not_run |
 
-Include the main success path and consequential failure/boundary paths.
+Include the main success path and consequential failure/boundary paths. Specify a representative user task with the intended level of technical experience and permitted help. Cover the onboarding, review, and recovery behaviors required by the selected fit decisions; keep results unrun until exercised.
 
 ## 9. Outcome and delivery
 

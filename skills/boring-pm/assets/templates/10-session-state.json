@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "project_id": "TBD",
   "revision": 0,
   "updated_at": null,
@@ -20,6 +20,14 @@
   "blocking_unknowns": [],
   "retained_assumptions": [],
   "last_transition": null,
-  "next_question": "What kind of work do you know deeply, and what happened recently that made you think software could help?",
-  "next_action": "Capture one concrete task and identify its first user."
+  "next_question": "What are you comfortable doing with software today—for example, using apps, setting up workflows, or writing code?",
+  "next_action": "Establish technical comfort if unknown, then recover one concrete task and its first user.",
+  "profile_refs": [],
+  "exploration": {
+    "option_ids": [],
+    "selected_option_id": null,
+    "comparison_path": null,
+    "decision_id": null,
+    "reconsider_when": []
+  }
 }

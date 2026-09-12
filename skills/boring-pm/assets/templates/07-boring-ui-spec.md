@@ -10,7 +10,9 @@ Consult [the verified baseline](../../references/boring-ui.md) and refresh it be
 - Framework packages and verified versions:
 - Agent prompt/skills/tools required:
 - First slice's user journey:
+- User-fit decisions: interaction depth, defaults, review/override, onboarding, and recovery:
 - Persistence and deployment owner:
+- Setup/maintenance expected from each actor and evidence that support is available:
 - Existing capabilities to reuse and missing additions:
 
 ## Requirement mapping
@@ -29,7 +31,7 @@ For each tool, define its purpose, input schema, result, side effect, actor/work
 
 ## Data and runtime
 
-Define authoritative artifact/session stores, IDs, concurrency, state revisions, retention, access boundaries, and recovery after restart. Separate model suggestions from confirmed domain decisions. Describe capability degradation when a tool or provider is unavailable.
+Define authoritative artifact/session stores, IDs, concurrency, state revisions, retention, access boundaries, and recovery after restart. If the product uses personal profiles, specify participant identity, private scope, correction, reuse, and isolation from public method files. Separate model suggestions from confirmed domain decisions. Describe capability degradation when a tool or provider is unavailable.
 
 ## Integration and proof
 

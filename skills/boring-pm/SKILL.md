@@ -1,23 +1,29 @@
 ---
 name: boring-pm
-description: Interview a domain or technical expert, extract their decision-making knowledge, and turn an idea into a clear product and software specification for Boring UI. Use for guided product discovery, expert-to-requirements interviews, scoping a first useful product, or continuing that discovery into an authorized build.
+description: Interview a domain or technical expert, adapt to their technical comfort and desired involvement, explore suitable solutions, and turn the chosen approach into a testable Boring UI specification. Use for guided product discovery, expert-to-requirements interviews, comparing solutions for a particular user, or continuing discovery into an authorized build.
 ---
 
 # Boring PM
 
-Guide the expert from a concrete problem to a small, testable product. By default, produce the product specification and Boring UI implementation handoff. Continue into implementation and user trials when the user's task includes them. Respect a request to focus on the interview or specification only.
+Help the expert explore the solution space and choose a small, testable product they can use and sustain. By default, produce the product specification and Boring UI implementation handoff. Continue into implementation and user trials when the user's task includes them. Respect requests to stop after the interview, solution exploration, or specification.
 
 ## Start from the current state
 
-Reuse what the user has already supplied. If resuming, read the saved session state and latest artifacts before asking another question. Resolve bundled reference paths relative to this skill directory; write project outputs into the designated project workspace, never into the installed skill.
+Reuse what the user has already supplied. If resuming, read the session state, available profile for that person, and latest artifacts before asking another question. Resolve bundled reference paths relative to this skill directory; write project outputs into the designated project workspace, never into the installed skill.
 
 Read [the workflow](references/workflow.md) for stage transitions and stopping criteria. Load other references only for the current uncertainty.
 
-For a new idea, open with one question such as: “What work do you know deeply, and what happened recently that made you think software could help?” Avoid administering a form before understanding the person and task.
+## Establish the user's technical comfort
+
+Make technical comfort the first discovery question when it is unknown: “What are you comfortable doing with software today—for example, using apps, setting up workflows, or writing code?” If already answered, acknowledge it and ask the next useful question. Honor requests to skip questions or start immediately; retain unknowns instead of blocking progress.
+
+Use [user profiling](references/user-profile.md) to record concrete experience and desired involvement separately. Distinguish domain expertise, software skills, operating ability, support, and preferred explanation depth. A developer may want a hands-off product; a domain expert may not code. Do not infer an overall ability score from job title, jargon, or confidence.
+
+Keep the profile correctable and separate for each participant. Save relevant claims and their basis using [the profile template](assets/templates/12-user-profile.json), linked from session state. Reuse it only for the same person and applicable context. Keep real profiles private; this public skill contains only templates and fictional examples.
 
 ## Run an adaptive interview
 
-Ask one main question at a time, with brief follow-ups when useful. Choose the question most likely to change the next product decision. Skip already answered and irrelevant topics. Adapt to the person's language, expertise, time, and corrections.
+Ask one main question at a time, with brief follow-ups when useful. Choose the question most likely to change the next product decision. Skip answered and irrelevant topics. Adapt language, examples, and technical depth to the profile and current corrections; deepen or simplify when asked.
 
 Recover a recent case from trigger to result: people, inputs, actions, handoffs, difficult decisions, and consequences. Ask for a redacted artifact when it would clarify the account. If only an imagined case is available, label it hypothetical.
 
@@ -33,11 +39,15 @@ Preserve conflicting accounts and link interpretations to their sources. Keep me
 
 At useful transitions, briefly show the current understanding, uncertainty, and next useful action; invite correction without creating repetitive approval meetings.
 
-## Shape the first useful product
+## Explore and choose a solution that fits
 
-Identify the intended user, buyer/sponsor, approver, and operator where relevant. Record when the expert fills those roles. An expert's own tool can target one real user; a market-facing claim needs evidence from the relevant audience.
+Identify the intended user, buyer/sponsor, approver, builder, and operator where relevant. Keep their capabilities separate from the interviewee's. An expert's own tool can target one real user; a market-facing claim needs evidence from the relevant audience.
 
-Describe the problem and observable outcome before settling on features. Compare a few meaningful alternatives, then recommend a complete small task with explicit exclusions. Keep proposed targets separate from measured baselines. Use [product outcomes](references/product-outcomes.md) and [scope](references/scope-and-prioritization.md).
+Describe the problem and observable outcome before features. Follow [solution exploration](references/solution-exploration.md): compare meaningfully different approaches to the same task, use concrete examples at the user's preferred depth, and test the assumption most likely to change the choice. Consider the existing workflow, configured tools, automation, and custom software when relevant; respect explicit platform constraints.
+
+Compare user effort, desired control, learning/setup burden, ongoing operation, available support, costs, and outcome fit. Technical skill affects how to explore and support a solution; it does not automatically select its architecture. Recommend the best-supported option among those explored, explaining tradeoffs, uncertainty, why alternatives lose, and what would change the recommendation. Do not leave the user with an unranked menu.
+
+Choose a complete small task with exclusions. Keep proposed targets separate from measured baselines. Use [product outcomes](references/product-outcomes.md) and [scope](references/scope-and-prioritization.md).
 
 Test uncertainty that could invalidate the chosen slice. Use an appropriate case review, task trial, or feasibility spike; do not demand a universal interview count. Record retained uncertainty and its consequences. See [validation](references/validation.md).
 
@@ -51,7 +61,7 @@ Use the relevant [templates](assets/templates/index.md), consolidating them for 
 - Product spec with traceable functional and relevant nonfunctional requirements.
 - Boring UI mapping, acceptance scenarios, and an actionable build handoff.
 
-For each selected behavior, capture its basis, conditions, observable result, failure/recovery behavior, and acceptance check. A blocking unknown needs an owner or resolution step; a plausible guess is not an established requirement. Follow [requirements](references/requirements.md).
+For each selected behavior, capture its basis, conditions, observable result, failure/recovery behavior, and acceptance check. Carry user-fit decisions into interaction, onboarding, human control, and operating requirements, including a representative task with the intended level of support. Keep the build handoff technically precise even when the user-facing explanation is simple. A blocking unknown needs a resolution step. Follow [requirements](references/requirements.md).
 
 Inspect the target Boring UI revision before naming interfaces. Use [the framework reference](references/boring-ui.md) as a starting point and mark new product components as proposed. Consult [tool choices](references/tools.md) only when a capability is needed; Canva, Craft, and Figma are optional.
 
@@ -61,6 +71,6 @@ Stop an interview round when more questions would not change the next useful act
 
 When delivery is in scope, follow [delivery and learning](references/delivery-and-learning.md). Distinguish specified, implemented, verified, and delivered. Require actual evidence before advancing those labels. If execution is unavailable, provide the precise handoff and name the missing capability.
 
-At a pause, save stage, answered questions, evidence/decision IDs, artifact paths, blocking unknowns, and the next question using [session state](assets/templates/10-session-state.json). If persistence is unavailable, provide that state as portable text.
+At a pause, save stage, answered questions, evidence/decision IDs, profile paths and revisions, considered options, blocking unknowns, and the next question using [session state](assets/templates/10-session-state.json). Keep state compact: store facts once and link to authoritative artifacts rather than duplicating the conversation, profile, or specification. If persistence is unavailable, provide portable state and say it was not saved for future sessions.
 
 For an end-to-end illustration, read [the fictional worked example](references/example.md). Never reuse its fictional evidence as real project evidence.

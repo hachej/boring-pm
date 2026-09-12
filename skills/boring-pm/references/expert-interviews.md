@@ -8,6 +8,8 @@ GOV.UK recommends a discussion guide, neutral prompts, real examples, and clarif
 
 Prepare around an uncertainty, not a list of features. Before the conversation, know which decision the interview should inform, why this participant can help, and what artifact might make their explanation concrete. Explain the purpose and how notes or recordings will be used. If recording is wanted, establish permission before recording.
 
+Use the [technical-comfort opening and profile](user-profile.md) before exploring solutions when the relevant context is unknown. Then recover a real case. Adapt the explanation to the person while keeping domain questions deep; technical confidence and domain expertise are separate. Do not make them repeat an answer or finish a profile form before the interview can help them.
+
 Walk through one recent case:
 
 1. **Set the scene:** what triggered the task, who was involved, and what was at stake?
@@ -34,4 +36,4 @@ Capture statements individually with source locations. Do not mix the person's w
 
 ## Exit and failure patterns
 
-You should be able to retell the case from trigger to result and point to its uncertain parts. Stop adding questions when the next useful action is observation or a prototype. Avoid treating politeness, excitement, or an expert's authority as independent support for demand. Use [the evidence template](../assets/templates/02-evidence.md).
+You should be able to retell the case from trigger to result and point to its uncertain parts. Stop adding questions when the next useful action is observation or a prototype. Avoid treating politeness, excitement, or an expert's authority as independent support for demand. Use [the evidence template](../assets/templates/02-evidence.md), then [compare candidate solutions](solution-exploration.md) rather than converting the first suggestion directly into requirements.
