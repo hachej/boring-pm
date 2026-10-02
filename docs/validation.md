@@ -1,5 +1,19 @@
 # Skill validation
 
+## Version 2 (2026-10-02)
+
+The skill was rebuilt around the Boring Factory (hachej/boring-factory
+`FACTORY.md`): the contract on its own pull request, approvals as the expert's
+GitHub review after an explicit confirmation, builders' `boring:ask`
+questions, previews and acceptance, all through `gh`. It keeps version 1's
+opening on the person's technical comfort and desired involvement. Version 2
+has passed `scripts/check.py` only; it has not yet been run with an expert or
+through the evals in `evals/README.md`.
+
+The notes below are about version 1 (the research-backed interview skill), kept
+for its findings.
+
+
 Reviewed: 2026-09-12. Original scenarios were checked on 2026-09-11; the profile and exploration extension was checked on 2026-09-12.
 
 ## Structural checks

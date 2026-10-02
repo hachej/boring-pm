@@ -1,14 +1,10 @@
 # Boring PM repository
 
-The deliverable is the portable skill at [skills/boring-pm/SKILL.md](skills/boring-pm/SKILL.md).
+The deliverable is the portable skill at [skills/boring-pm/SKILL.md](skills/boring-pm/SKILL.md), installed with `npx skills add hachej/boring-pm`.
 
-- Use that skill for expert interviews and product specification tasks.
-- Keep the entry point concise. Load topic references only when needed.
-- Establish technical comfort when unknown, keep correctable participant profiles private, and compare solutions for the actual user's desired involvement and available support.
-- Preserve the distinction between the interviewee, product users, builder, and operator; a technical profile is not an overall ability score or an automatic architecture choice.
-- Preserve source IDs, source links, evidence labels, and the distinction between a proposed spec and executed product behavior.
-- Keep references and templates inside the skill directory so a copied installation remains self-contained.
-- Do not add real private interviews or unpublished product plans to this public repository.
-- Update source metadata when revising an attributed method or framework claim.
-- Run `python3 scripts/check.py` after changes to references, templates, or source metadata.
-- Respect the user's scope. App implementation and third-party integrations are separate follow-on work.
+- Keep SKILL.md short: the role, the start checks, the fixed rules, and which file to open. Detail goes in the files it routes to.
+- Keep every file the skill needs inside `skills/boring-pm/`, with no links outside it: a copied directory is the whole skill.
+- The process is hachej/boring-factory's `FACTORY.md`: approvals are the expert's GitHub reviews on an exact commit, submitted only after the expert confirms in the session. Never weaken that rule.
+- The skill uses only `git` and `gh`. Do not add servers, MCP configuration or other tools.
+- Do not add real interviews, real personal data or unpublished product plans to this public repository.
+- Evals live in `evals/`, outside the skill. Run `python3 scripts/check.py` after any change.
