@@ -1,0 +1,67 @@
+{
+  "note": "The skills of hachej/boring-stack and where the vendored ones come from. Installed with the skills CLI (npx skills add hachej/boring-stack), never committed to an app. Vendored skills are copied as they are at these commits unless listed under changes.",
+  "sources": [
+    {
+      "repo": "cursor/plugins",
+      "path": "pstack/skills",
+      "commit": "c47b12849e43f18d5c374c7069c744cc55b0ea00",
+      "license": "MIT (licenses/pstack.LICENSE)",
+      "excluded": [
+        "setup-pstack",
+        "swarm",
+        "poteto-mode (replaced by boring-mode)",
+        "reflect (this repository's own version kept)",
+        "recall",
+        "make-bot-ui (wakes Cursor automations)",
+        "automate-me",
+        "playbooks orchestrate, autopilot-full, autopilot-stack, babysit, shipping, autonomous-run, worktree-cleanup, multi-phase-plan, session-pickup, pause-safely, hillclimb, eval, runtime-forensics, trace-forensics, authoring-a-skill",
+        "the Cursor plugin manifest"
+      ],
+      "changes": [
+        "boring-mode: new router from poteto-mode",
+        "boring-mode/playbooks: investigation, feature, refactoring, perf-issue, prototype, visual-parity copied with the control skill replaced by the verify CLI and configured models by the model the worker runs on; bug-fix rewritten with Benny's reproduce-and-fix; opening-a-pr rewritten for the evidence table and proof",
+        "figure-it-out: points to boring-mode",
+        "no-comments/references/comment-sicko.md: from pstack/agents"
+      ]
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "path": "skills",
+      "commit": "e8a175de22ae1e49370fc144c1f3bb9aeedf988d",
+      "license": "MIT (licenses/emilkowalski-skills.LICENSE)",
+      "skills": [
+        "emil-design-eng",
+        "animate",
+        "review-animations",
+        "find-animation-opportunities",
+        "pick-ui-library",
+        "mobile-native",
+        "prototype"
+      ]
+    },
+    {
+      "repo": "poteto/noodle",
+      "path": ".agents/skills",
+      "commit": "82d2921c52370f23f29086de81ccfb600939c037",
+      "license": "MIT (licenses/noodle.LICENSE); frontend-design: Apache-2.0 (frontend-design/LICENSE.txt)",
+      "skills": [
+        "make-interfaces-feel-better",
+        "interaction-design",
+        "frontend-design"
+      ]
+    },
+    {
+      "repo": "hachej/boring-factory",
+      "path": "stack",
+      "license": "this repository",
+      "skills": [
+        "boring-mode",
+        "verify-app",
+        "verify-this",
+        "new-agent",
+        "platform-request",
+        "reflect"
+      ]
+    }
+  ]
+}

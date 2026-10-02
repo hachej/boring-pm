@@ -1,10 +1,10 @@
-# Boring PM repository
+# boring-stack repository
 
-The deliverable is the portable skill at [skills/boring-pm/SKILL.md](skills/boring-pm/SKILL.md), installed with `npx skills add hachej/boring-pm`.
+All the skills of the Boring platform, one folder each under `skills/<name>/` (the skills CLI layout).
 
-- Keep SKILL.md short: the role, the start checks, the fixed rules, and which file to open. Detail goes in the files it routes to.
-- Keep every file the skill needs inside `skills/boring-pm/`, with no links outside it: a copied directory is the whole skill.
-- The process is hachej/boring-factory's `FACTORY.md`: approvals are the expert's GitHub reviews on an exact commit, submitted only after the expert confirms in the session. Never weaken that rule.
-- The skill uses only `git` and `gh`. Do not add servers, MCP configuration or other tools.
-- Do not add real interviews, real personal data or unpublished product plans to this public repository.
-- Evals live in `evals/`, outside the skill. Run `python3 scripts/check.py` after any change.
+- A skill folder is self-contained: its files and its LICENSE travel with it. A skill may point to a sibling skill (the stack installs them together), never outside `skills/`.
+- Keep each SKILL.md short: when to use it, the fixed rules, which file to open. Detail goes in the files it routes to.
+- Third-party skills keep their attribution (`THIRD_PARTY.md`, `SOURCE.json`) and their LICENSE file.
+- `boring-pm` uses only `git` and `gh`: no servers, no MCP configuration.
+- No real interviews, personal data or unpublished product plans in this public repository.
+- Run `python3 scripts/check.py` after any change.

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Check the portable skill offline: local links stay inside it, JSON parses,
-SKILL.md has the front matter the skills CLI needs, and every file SKILL.md
-routes to exists.
+"""Check the skills offline: every skills/<name>/SKILL.md has the front matter the
+skills CLI needs (name = folder, a description); local links stay inside their
+skill; JSON parses; third-party skills carry their licence; boring-pm routes to
+its files.
 
 This does not validate the truth of claims, external link availability, or agent
 behavior. It has no third-party dependencies and performs no mutations.
@@ -16,17 +17,34 @@ import sys
 
 def check(root: Path) -> list[str]:
     errors = []
+    skills = sorted(p for p in (root / "skills").iterdir() if p.is_dir())
+    ours = set(json.loads((root / "SOURCE.json").read_text())["sources"][-1]["skills"]) | {"boring-pm", "boring-new-app"}
+    for one in skills:
+        text = (one / "SKILL.md").read_text() if (one / "SKILL.md").exists() else ""
+        front = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+        if not front:
+            errors.append(f"skills/{one.name}/SKILL.md has no front matter")
+            continue
+        name = re.search(r"^name:\s*\"?([^\"\n]+)\"?\s*$", front.group(1), re.M)
+        if not name or name.group(1).strip() != one.name:
+            errors.append(f"skills/{one.name}/SKILL.md: name must equal the folder name")
+        if not re.search(r"^description:", front.group(1), re.M):
+            errors.append(f"skills/{one.name}/SKILL.md needs a description")
+        # The skills CLI parses the front matter as strict YAML and skips a skill it cannot
+        # parse (an unquoted value containing ": " is the usual cause): parse it the same way.
+        try:
+            import yaml
+            meta = yaml.safe_load(front.group(1))
+            if not isinstance(meta, dict) or not isinstance(meta.get("description"), str):
+                errors.append(f"skills/{one.name}/SKILL.md: the front matter must be a YAML mapping with a string description")
+        except ImportError:
+            pass
+        except yaml.YAMLError as e:
+            errors.append(f"skills/{one.name}/SKILL.md: front matter is not valid YAML (quote the value): {str(e).splitlines()[0]}")
+        if one.name not in ours and not ((one / "LICENSE").exists() or (one / "LICENSE.txt").exists()):
+            errors.append(f"skills/{one.name}: a third-party skill carries its LICENSE")
     skill = root / "skills" / "boring-pm"
     entry = (skill / "SKILL.md").read_text()
-    front = re.match(r"^---\n(.*?)\n---\n", entry, re.S)
-    if not front:
-        errors.append("SKILL.md has no front matter")
-    else:
-        fields = dict(line.split(":", 1) for line in front.group(1).splitlines() if ":" in line)
-        if fields.get("name", "").strip() != skill.name:
-            errors.append("SKILL.md name must equal the directory name (boring-pm)")
-        if len(fields.get("description", "").strip()) < 40:
-            errors.append("SKILL.md needs a description")
     for name in ("onboarding.md", "discovery.md", "tickets.md", "mockups.md", "templates/contract.md", "templates/mockup.html", "templates/scenario.md"):
         if not (skill / name).exists():
             errors.append(f"Missing skill file: {name}")
@@ -48,13 +66,14 @@ def check(root: Path) -> list[str]:
         body = path.read_text()
         for link in re.findall(r"\]\(([^)]+)\)", body):
             parsed = urlsplit(link)
-            if parsed.scheme or link.startswith("#"):
+            if parsed.scheme or link.startswith("#") or "." not in link:
                 continue
             target = (path.parent / unquote(parsed.path)).resolve()
             if not target.exists():
                 errors.append(f"Broken link in {path.relative_to(root)}: {link}")
-            if path.is_relative_to(skill) and not target.is_relative_to(skill):
-                errors.append(f"Nonportable skill link: {link}")
+            # A skill may point to a sibling skill (the stack installs them together), never outside skills/.
+            if path.is_relative_to(root / "skills") and not target.is_relative_to(root / "skills"):
+                errors.append(f"Nonportable skill link in {path.relative_to(root)}: {link}")
         if "[TODO" in body:
             errors.append(f"Unfinished scaffold in {path.relative_to(root)}")
     return errors
@@ -70,4 +89,4 @@ if __name__ == "__main__":
     if failures:
         print("\n".join(failures), file=sys.stderr)
         raise SystemExit(1)
-    print("PASS: SKILL.md front matter and routes, portable local links, JSON, offline mockup template")
+    print(f"PASS: {len(list((repo_root / 'skills').iterdir()))} skills: front matter, licences, portable local links, JSON; boring-pm routes and offline mockup")
