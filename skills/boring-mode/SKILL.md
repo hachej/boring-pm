@@ -1,6 +1,6 @@
 ---
 name: boring-mode
-description: The worker's router in a repository run by the Boring Factory. Use at the start of every task from a work packet (a task issue, its acceptance lines and their proof): it picks the playbook, the principles and the proof the pull request must carry. Adapted from pstack's poteto-mode.
+description: "The worker's router in a repository run by the Boring Factory. Use at the start of every task from a work packet (a task issue, its acceptance lines and their proof): it picks the playbook, the principles and the proof the pull request must carry. Adapted from pstack's poteto-mode."
 ---
 
 # Boring mode
