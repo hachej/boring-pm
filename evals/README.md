@@ -2,7 +2,7 @@
 
 Two suites, run on every change to the skill (`skills/boring-pm/`). A change
 merges only with both suites' results in its pull request. The evals live
-here, at the repository root, so `npx skills add hachej/boring-pm` never
+here, at the repository root, so `npx skills add hachej/boring-stack` never
 installs them into a project.
 
 | Suite | Question | Scoring | Pass |

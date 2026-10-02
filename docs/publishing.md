@@ -1,6 +1,6 @@
 # Maintain the public repository
 
-Public repository: [hachej/boring-pm](https://github.com/hachej/boring-pm). Default branch: `main`.
+Public repository: [hachej/boring-stack](https://github.com/hachej/boring-stack). Default branch: `main`.
 
 The portable skill lives in `skills/boring-pm`. Keep its references and templates together when copying or installing it. Repository documentation explains the structure; the skill entry point controls agent behavior.
 

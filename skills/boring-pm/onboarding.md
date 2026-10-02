@@ -52,7 +52,6 @@ Cursor), so the project's settings and instructions apply.
 
 ## Keeping the skill up to date
 
-The skill is installed with `npx skills add hachej/boring-pm -g`; run the same
+The skill is installed with `npx skills add hachej/boring-stack --skill boring-pm -g`; run the same
 command again to update it. The project's own Factory files (labels, forms,
-workflows) are updated by the maintainer through "Bump boring-factory" pull
-requests; you do not change them.
+the workflow callers) belong to the maintainer; you do not change them.
