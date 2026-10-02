@@ -50,12 +50,28 @@ expert approved, it is a contract change: back to [discovery.md](discovery.md).
 
 ## A preview to try
 
-When a pull request of the feature runs on a preview (`state:a-essayer`):
+When the Factory asks the expert to review a pull request of the feature
+(its comment names them, `boring/ci` and `boring/proof` are green), propose the
+trial. If the pull request has no live preview of its head, start one: with
+the expert's agreement, comment on the pull request (the expert's account has
+write access):
 
 ```
-gh api "repos/{owner}/{repo}/deployments?environment=preview/pr-<pr>&per_page=1" --jq '.[0].id'
+gh pr comment <pr> --body "/preview"
+```
+
+A VM app then runs that head for about an hour, with fake models and invented
+data, at a temporary public address; a Cloudflare app has its preview already.
+Read the address once it is up (a few minutes; `state:a-essayer` appears):
+
+```
+gh api "repos/{owner}/{repo}/deployments?environment=preview/pr-<pr>&per_page=1" --jq '.[0] | {id, sha}'
 gh api repos/{owner}/{repo}/deployments/<id>/statuses --jq '.[0] | {state, environment_url}'
 ```
+
+Use it only when `state` is `success` and `sha` is the pull request's head
+(`gh pr view <pr> --json headRefOid --jq .headRefOid`); `inactive` means the
+window ended or a new commit arrived: post `/preview` again.
 
 Guide the trial: the link, then short numbered steps taken from the contract's
 scenarios, on fictional data, with what the expert should see at each step.
