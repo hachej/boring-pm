@@ -40,8 +40,8 @@ the repository itself, where it is reviewed like code.
 5. **AGENTS.md**: a rule every agent needs on every task. Keep it short: move detail to a skill.
 6. **Upstream**: a gap in `@boring/agent`, `@boring/files` or `@boring/chat` goes to
    hachej/boring-ui-v3 as an issue or a pull request, never as an edit of `vendor/`.
-7. **The template** (hachej/boring-factory, `templates/app/`): a lesson every
-   app needs. Say so, so it lands there and reaches the apps with the next bump.
+7. **The template** (hachej/boring-app): a lesson every new app needs. Say so,
+   so it lands in the template; existing apps take it by a normal pull request.
 
 ## Summary
 

@@ -74,5 +74,5 @@ model you run on; a "second model" is a fresh subagent with the same prompt.
 ## Autonomy
 
 Reversible work proceeds without asking. Never merge, approve, deploy,
-force-push a shared branch, edit vendored or managed files (listed in
-`.boring/factory.lock`), or touch another task's branch.
+force-push a shared branch, edit `vendor/` or the factory's workflow caller
+(`.github/workflows/factory.yml`), or touch another task's branch.
